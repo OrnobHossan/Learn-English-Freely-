@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
+   <title>Practice English Freely | Contact Us</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<style>
+section {max-width:600px; margin: auto;}  
+section h1{
+   text-align: center;
+   border-radius: 1rem;
+   background:var(--bg);
+   margin:1rem 6rem;
+   color:#fff;
+   font-weight: normal;
+}  
+  .contact-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+form {
+   display: flex;
+   flex-direction:column;
+   gap: 0;
+   width:100%;
+   padding:1rem;
+   margin: auto;
+}
+form input {
+   padding:10px 20px;
+   font-size:1.2rem;
+   margin:0 0 1rem;
+   outline:0;
+   border:2px solid rgb(0,30,65);
+   border-radius: 0 1rem 1rem 1rem;
+}
+textarea{
+   font-size:1.2rem;
+   max-width:100%;
+   min-width:100%;
+   outline:0;
+   margin:0;
+   border-radius: 0 1.5rem 1.5rem 1.5rem;
+   border:2px solid rgb(0,30,65);
+   padding:10px 20px;
+}  
+
+button{
+   font-size:1.5rem;
+   margin:2rem 5rem 1rem;
+   padding:5px 10px;
+   background:var(--bg);
+   color:#fff;
+   border:0;
+   border-radius: 1rem;
+   
+}
+
+form label {
+   font-size:1.2rem;
+   color:rgb(0,30,65);
+}
+
+</style>
+<body>
+  <header>
+    <div>
+       <img src="favicon.png">
+       <p>Practice English<span> Freely</span></p>
+    </div>
+    <nav>
+       <a href="index.html">Home</a>
+       <a href="learn.html">Learn</a>
+       <a href="practice.html">Practice</a>
+       <a href="contact.html" class="active">Contact Us</a>
+    </nav>        
+  </header>    
+<section>
+   
+   
+   
+  <form id='contact-form'>
+    <h1>Message Us</h1>
+     <p class='contact-subtitle'>We’d love to hear from you. Please fill out the
+      form below and we’ll get back to you shortly.</p>
+        
+    <label for='name'>Name:</label>
+    <input type='text' placeholder='Name' id='name' name='user_name' required>
+
+    <label for='email'>Email:</label>
+    <input type='email' placeholder='Email' id='email' name='user_email' required>
+
+    <label for='message'>Message:</label>
+    <textarea id='message' name='message'placeholder='Your Message' rows='10' required></textarea>
+
+    <button type='submit'>Send</button>
+  </form>   
+</section> 
+<footer>
+  <p><i class="far fa-copyright"></i>2025 Practice English Freely. All rights reserved.</p>
+  <p>Made with <i style="color:#FC830E"class="fas fa-heart"></i> for learners in
+   Bangladesh.</p>
+</footer>  
+
+  <script src='https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js'></script>
+  <script>
+    (function() {
+      emailjs.init('9Iu97tB4ckGPR8I1o'); // Replace with your actual public key
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_3nkdp0d', 'template_w9n7c4d', this)
+        .then(function() {
+          alert('Message sent successfully!');
+        }, function(error) {
+          alert('Failed to send message: ' + error.text);
+        });
+    });
+  </script>  
+</body>
+</html>
