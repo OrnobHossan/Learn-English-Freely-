@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+:root{
+   --d:rgb(11,21,46);
+   --l:rgb(17,118,200);
+   --bg: linear-gradient(90deg,var(--d),var(--l));
+      
+}
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+header{
+   display: flex;
+   flex-direction: column;
+   background: linear-gradient(90deg,var(--d),var(--l));
+}
+
+header div{
+   height: 100px;
+   display: flex;
+   align-items: center;
+   padding:0 1rem;
+   gap:10px;
+}
+header div p{
+   font-size: 2rem;
+   color: #fff;
+   position: relative;
+   height: 80%;
+   align-content: center;
+}
+header div span{color: #FC830E;}
+
+header div p::after{
+   content: '';
+   display: block;
+   border: 5px solid #fff;
+   position: absolute;
+   width: 100%;
+   bottom: 0;
+   left: -8%;
+}
+header div img{
+   height: 80%;
+   width: auto;
+   padding: 3px 8px 3px 3px;
+   background: #fff;
+   border-radius:1rem 1rem 0 1rem;
+}
+
+
+header nav{
+   display: flex;
+   padding: 10px 1rem;
+   gap:50px;
+   overflow: auto;
+   flex-wrap: nowrap;
+   font-size: 1rem;
+   border-top: 1px solid #fff;
+}
+header nav a{
+   text-transform: uppercase;
+   padding: 2px 20px;
+   border-radius: 8px;
+   white-space: nowrap;
+   color: #fff;
+}
+.active{
+     background: #fff;
+     color: rgb(0,30,65);
+     font-weight: bold;
+}
+
+section{
+   padding: 1rem;
+   font-family: 'Poppins',sans-serif;
+}
+footer{
+   height: 100px;
+   text-align: center;
+   align-content: center;
+   align-items: center;
+   background: var(--bg);
+   color: #fff;
+   font-size:1rem;  
+}
+
+
+
+/* Default (above 1024px) */
+p {
+  font-size: 1rem;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+
+/* Tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+  p {
+    font-size: 0.9rem;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.4rem; }
+  h4 { font-size: 1.2rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
+}
+
+/* Mobile (max-width: 435px) */
+@media (max-width: 435px) {
+  p {
+    font-size: 0.85rem;
+  }
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 0.95rem; }
+  h6 { font-size: 0.85rem; }
+}
+
+/* Small mobile (max-width: 375px) */
+@media (max-width: 375px) {
+  p {
+    font-size: 0.8rem;
+  }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  h4 { font-size: 1rem; }
+  h5 { font-size: 0.9rem; }
+  h6 { font-size: 0.8rem; }
+}
